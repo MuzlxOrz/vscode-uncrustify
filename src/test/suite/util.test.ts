@@ -12,13 +12,13 @@ describe('utility functions', () => {
             ok(util.getPlatformSuffix('linux') === '.linux');
             ok(util.getPlatformSuffix('darwin') === '.osx');
             ok(util.getPlatformSuffix('win32') === '.windows');
-            ok(util.getPlatformSuffix('unknown') === undefined);
+            ok(util.getPlatformSuffix('unknown') === '.unknown');
         });
     });
 
     describe('get extension config', () => {
         describe('default workspace folder', () => {
-            let config;
+            let config : ReturnType<typeof util.getExtensionConfig>;
 
             before(() => {
                 config = util.getExtensionConfig();
@@ -34,14 +34,14 @@ describe('utility functions', () => {
         });
 
         describe('passed workspace folder', () => {
-            let config;
+            let config : ReturnType<typeof util.getExtensionConfig>;;
 
             before(() => {
-                const workspaceFolder = vscode.workspace.workspaceFolders.find((folder) => {
+                const workspaceFolder = vscode.workspace.workspaceFolders?.find((folder) => {
                     return folder.name === "windows";
                 });
 
-                config = util.getExtensionConfig(workspaceFolder.uri);
+                config = util.getExtensionConfig(workspaceFolder?.uri);
             });
 
             it('should retreve the windows config', () => {

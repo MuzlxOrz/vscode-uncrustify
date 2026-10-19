@@ -8,12 +8,12 @@
     }
   ],
   "settings": {
-    "editor.defaultFormatter": "zachflower.uncrustify",
+    "editor.defaultFormatter": "MuzlxOrz.uncrustify-plus",
     "[c]": {
-      "editor.defaultFormatter": "zachflower.uncrustify"
+      "editor.defaultFormatter": "MuzlxOrz.uncrustify-plus"
     },
-    "uncrustify.configPath.linux": "uncrustify.cfg",
-    "uncrustify.configPath.windows": "uncrustify.cfg",
-    "uncrustify.configPath.macos": "uncrustify.cfg",
+    "uncrustify-plus.configPath.linux": "uncrustify.cfg",
+    "uncrustify-plus.configPath.windows": "uncrustify.cfg",
+    "uncrustify-plus.configPath.macos": "uncrustify.cfg",
   }
 }
